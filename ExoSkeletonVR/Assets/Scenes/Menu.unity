@@ -7788,7 +7788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When you are ready, go to the flaoting Menu and select the testing area
+  m_text: When you are ready, go to the floating Menu and select the testing area
     you want
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
