@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 167457180}
   - component: {fileID: 167457179}
   m_Layer: 5
-  m_Name: CoachingCardRoot
+  m_Name: TutorialCardRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
