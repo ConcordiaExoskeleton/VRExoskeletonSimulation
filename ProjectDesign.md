@@ -3,6 +3,8 @@
 **Date:** 10/04/2025  
 **Authors:** Kevin Wu & Rida Chaarani  
 
+**Last modified:** 22/04/2025
+
 ---
 
 ## 1. App Info

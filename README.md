@@ -2,17 +2,26 @@
 
 ## Overview
 
-This project is a VR testing simulation designed for wireless virtual reality paired with usage of exoskeleton. It focuses on simulating a real-world construction tasks such as lifting, carrying, placing and tying rebar. The environment mimics an outdoor construction site to provide an immersive experience for users.
+This project is a VR testing simulation designed for wireless virtual reality headsets (Tested on Meta Quest 3) paired with usage of an exoskeleton to evaluate and test the efficacy of different exoskeleton designs in a construction environments as a standarized test. It's goal is to simulates tasks like lifting, carrying, placing, and tying rebar in a realistic outdoor construction site environment.
 
 ## Features
 
 #### Core features:
 
-X
+- Back support exoskeleton testing mode
+    - rebar tying simulation of a 6m x 6m with 25cm spacing work zone
+- Arm support exoskeleton testing mode
+- Tutorial UI for each scene
+- Realistic construction site environment
+- Physics-based object interaction
+- Progress/Completion feedback
 
 #### Other features:
 
-X
+- Audio and haptic feedback
+- Menu scene with scene selection
+- Modular design for future task additions
+- Support for direct interactor input
 
 ## Visuals
 
@@ -25,16 +34,44 @@ X
 | Grab            | Grip button          |  
 | Tie             | Trigger button       |
 
-## Usage
 
-#### Material
+## Hardware Requirements
 
-- Wireless VR
+- VR headset (Tested on Meta Quest 3)
+- Compatible PC with Meta Quest Link
+- Installed Meta Quest app (for developer mode)
+- USB-C cable for connecting Quest to PC (if using wired link)
 - Exoskeleton
 
-## Work stack
+## How to Run
 
-- Unity Game Engine: Real-time development plateform VR engine
+1. **Enable Developer Mode** on your Meta Quest 3:
+   - Open the **Meta Quest app** on your mobile device.
+   - Go to **Settings > Developer Mode** and enable it.
+
+2. **Connect to PC**:
+   - Use **Meta Quest Link** via USB-C or Air Link to connect the headset to your Unity development environment.
+
+3. **Unity Setup**:
+   - Install Unity with the **Android Build Support** module.
+   - Open the project in Unity Hub.
+   - Go to **Edit > Project Settings**
+   - Under **XR Plug-in Management**, enable **OpenXR** for Android.
+   - Go to **File > Build Settings**.
+   - Select **Android** as the platform and click **Switch Platform**.
+   
+
+4. **Build and Run**:
+   - Connect your headset via USB.
+   - Select your headset in the **Build Settings > Run Device** dropdown.
+   - Click **Build and Run** to deploy directly to the headset.
+
+## Tech Stack
+
+- **Engine:** Unity
+- **Language:** C#
+- **Platform:** Meta Quest 3 (Android)
+- **XR SDK:** Oculus XR Plugin
 
 ## Authors and acknowledgment
 
@@ -44,7 +81,8 @@ Special thanks: PhD Professor Dr. Amin Hammad and Concordia university for lendi
 
 ## Project status
 
-The project is in the starting development phase.
+🚧 **Early Development**  
+We are currently building the core scenes and establishing interaction systems. More features and polish coming soon!
 
 ## License
 
