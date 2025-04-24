@@ -10,10 +10,12 @@ public class ShowTimerOnGrab : MonoBehaviour
     public GameObject radialTimerUI;
     public float fillDuration = 10f;
     public Slider radialSlider;
+    public GameObject sphere;
 
     private XRGrabInteractable grabInteractable;
     private bool isGrabbed = false;
     private float timer = 0f;
+    private bool hasCompleted = false;
 
     void Start()
     {
@@ -36,23 +38,36 @@ public class ShowTimerOnGrab : MonoBehaviour
 
     void Update()
     {
-        if (isGrabbed && radialSlider != null)
+        if (!hasCompleted && isGrabbed && radialSlider != null)
         {
             timer += Time.deltaTime;
             radialSlider.value = Mathf.Clamp01(timer / fillDuration);
+
+            if (radialSlider.value >= 1f)
+            {
+                hasCompleted = true;
+                radialTimerUI?.SetActive(false);
+                sphere.SetActive(false);
+            }
         }
     }
 
     void OnGrabbed(SelectEnterEventArgs args)
     {
-        isGrabbed = true;
-        radialTimerUI?.SetActive(true);
+        if (!hasCompleted)
+        {
+            isGrabbed = true;
+            radialTimerUI?.SetActive(true);
+        }
     }
 
     void OnReleased(SelectExitEventArgs args)
     {
         isGrabbed = false;
-        radialTimerUI?.SetActive(false);
 
+        if (!hasCompleted)
+        {
+            radialTimerUI?.SetActive(false);
+        }
     }
 }
