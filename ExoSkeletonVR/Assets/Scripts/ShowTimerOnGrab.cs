@@ -10,7 +10,7 @@ public class ShowTimerOnGrab : MonoBehaviour
     public GameObject radialTimerUI;
     public float fillDuration = 10f;
     public Slider radialSlider;
-
+    public List<ParticleSystem> finishParticles;
     public GameObject tyingObject;
 
     private XRGrabInteractable grabInteractable;
@@ -18,14 +18,16 @@ public class ShowTimerOnGrab : MonoBehaviour
     private float timer = 0f;
     private bool hasCompleted = false;
 
-    // Grid movement variables
-    private Vector3 startPosition = new Vector3(-3f, 0.2f, 0f);
+    private Vector3 startPosition = new Vector3(-3f, 0.05f, 0f);
     private float spacing = 0.25f;
     private int cols = 25; // 6m / 0.25 = 24 steps + start
     private int rows = 25;
 
     private int currentCol = 0;
     private int currentRow = 0;
+    
+    public float maxGrabDistance = 1.5f;
+    private Transform interactorTransform;
 
     void Start()
     {
@@ -55,6 +57,17 @@ public class ShowTimerOnGrab : MonoBehaviour
 
     void Update()
     {
+        if (isGrabbed && interactorTransform != null)
+        {
+            float distance = Vector3.Distance(transform.position, interactorTransform.position);
+            if (distance > maxGrabDistance)
+            {
+                grabInteractable.interactionManager.SelectExit(interactorTransform.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor>(), grabInteractable);
+                isGrabbed = false;
+                radialTimerUI?.SetActive(false);
+            }
+        }
+
         if (isGrabbed && radialSlider != null)
         {
             timer += Time.deltaTime;
@@ -70,6 +83,7 @@ public class ShowTimerOnGrab : MonoBehaviour
 
     void OnGrabbed(SelectEnterEventArgs args)
     {
+        interactorTransform = args.interactorObject.transform;
         if (!hasCompleted)
         {
             isGrabbed = true;
@@ -79,6 +93,7 @@ public class ShowTimerOnGrab : MonoBehaviour
 
     void OnReleased(SelectExitEventArgs args)
     {
+        interactorTransform = null;
         isGrabbed = false;
         radialTimerUI?.SetActive(false);
     }
@@ -95,6 +110,13 @@ public class ShowTimerOnGrab : MonoBehaviour
         if (currentRow >= rows)
         {
             Debug.Log("All ties completed.");
+            foreach (var ps in finishParticles)
+            {
+                if (ps != null)
+                    ps.Play();
+            }
+            Destroy(tyingObject.transform.root.gameObject);
+            Destroy(transform.root.gameObject);
             return;
         }
 

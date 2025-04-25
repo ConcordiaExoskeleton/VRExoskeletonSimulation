@@ -1799,6 +1799,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1193963897204102087, guid: 959c253595650cf4d842ab18626bea59, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1733424650594131504, guid: 959c253595650cf4d842ab18626bea59, type: 3}
       propertyPath: m_Name
       value: Tying
@@ -2534,12 +2538,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radialTimerUI: {fileID: 273509414}
-  fillDuration: 0.05
+  fillDuration: 1
   radialSlider: {fileID: 1226443387}
   finishParticles:
   - {fileID: 1983839468}
   - {fileID: 1541489220}
   tyingObject: {fileID: 745091334}
+  maxGrabDistance: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
