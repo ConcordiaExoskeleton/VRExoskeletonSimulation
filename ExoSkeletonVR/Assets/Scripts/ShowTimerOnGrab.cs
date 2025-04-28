@@ -26,8 +26,10 @@ public class ShowTimerOnGrab : MonoBehaviour
     private int currentCol = 0;
     private int currentRow = 0;
     
-    public float maxGrabDistance = 1.5f;
+    public float maxGrabDistance = 2f;
     private Transform interactorTransform;
+
+    public GameObject spawnPrefab;
 
     void Start()
     {
@@ -100,6 +102,28 @@ public class ShowTimerOnGrab : MonoBehaviour
 
     void MoveToNextPoint()
     {
+        Quaternion spawnRotation = Quaternion.Euler(-90f, 0f, 0f);
+
+        if ((currentCol == 0 && currentRow == 0) ||
+        (currentCol == cols - 1 && currentRow == 0) ||
+        (currentCol == 0 && currentRow == rows - 1) ||
+        (currentCol == cols - 1 && currentRow == rows - 1))
+        {
+            spawnRotation = Quaternion.Euler(-90f, 0f, 50f);
+        }
+
+        if (spawnPrefab != null)
+        {
+            Vector3 spawnPosition = transform.position;
+
+            if (currentRow % 5 == 0)
+            {
+                spawnPosition.y -= 0.02f;
+            }
+
+            Instantiate(spawnPrefab, spawnPosition, spawnRotation);
+        }
+
         currentCol++;
         if (currentCol >= cols)
         {
