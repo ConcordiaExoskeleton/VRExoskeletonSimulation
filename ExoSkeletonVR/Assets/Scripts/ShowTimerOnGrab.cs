@@ -26,7 +26,7 @@ public class ShowTimerOnGrab : MonoBehaviour
     private int currentCol = 0;
     private int currentRow = 0;
     
-    public float maxGrabDistance = 2f;
+    public float maxGrabDistance = 1.5f;
     private Transform interactorTransform;
 
     public GameObject spawnPrefab;
