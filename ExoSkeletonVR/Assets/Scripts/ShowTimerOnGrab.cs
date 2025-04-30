@@ -100,6 +100,21 @@ public class ShowTimerOnGrab : MonoBehaviour
         radialTimerUI?.SetActive(false);
     }
 
+    public void StartGrab()
+    {
+        if (!hasCompleted)
+        {
+            isGrabbed = true;
+            radialTimerUI?.SetActive(true);
+        }
+    }
+
+    public void EndGrab()
+    {
+        isGrabbed = false;
+        radialTimerUI?.SetActive(false);
+    }
+
     void MoveToNextPoint()
     {
         Quaternion spawnRotation = Quaternion.Euler(-90f, 0f, 0f);
