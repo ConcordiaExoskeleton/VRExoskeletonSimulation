@@ -6,6 +6,7 @@ public class TaskGroupManager : MonoBehaviour
 {
     public GameObject[] tasks;
     public TaskGroupManager nextGroup;
+    public TaskGroupChainManager chainManager;
 
     private int currentTaskIndex = 0;
 
@@ -41,6 +42,7 @@ public class TaskGroupManager : MonoBehaviour
                 nextGroup.gameObject.SetActive(true);
                 nextGroup.ActivateGroup();
             }
+            chainManager?.NotifyGroupCompleted();
         }
     }
 
