@@ -4,31 +4,53 @@ using UnityEngine;
 
 public class TaskGroupManager : MonoBehaviour
 {
-    public GameObject objectToReveal;
-    private int completedTasks = 0;
-    public int totalTasks = 4;
+    public GameObject[] tasks;
+    public TaskGroupManager nextGroup;
+
+    private int currentTaskIndex = 0;
 
     private void Start()
     {
-        if (objectToReveal != null)
-            objectToReveal.SetActive(false);
+        
+        for (int i = 0; i < tasks.Length; i++)
+        {
+            tasks[i].SetActive(i == 0);
+        }
     }
 
     public void NotifyTaskCompleted(OnProximity task)
     {
-        completedTasks++;
-        Debug.Log($"Task completed. Total: {completedTasks}/{totalTasks}");
-
-        if (completedTasks >= totalTasks)
+        
+        if (currentTaskIndex < tasks.Length)
         {
-            RevealObject();
+            tasks[currentTaskIndex].SetActive(false);
+        }
+
+        currentTaskIndex++;
+
+        
+        if (currentTaskIndex < tasks.Length)
+        {
+            tasks[currentTaskIndex].SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Task group completed!");
+            if (nextGroup != null)
+            {
+                nextGroup.gameObject.SetActive(true);
+                nextGroup.ActivateGroup();
+            }
         }
     }
 
-    private void RevealObject()
+    public void ActivateGroup()
     {
-        Debug.Log("All tasks complete — revealing object!");
-        if (objectToReveal != null)
-            objectToReveal.SetActive(true);
+        currentTaskIndex = 0;
+
+        for (int i = 0; i < tasks.Length; i++)
+        {
+            tasks[i].SetActive(i == 0);
+        }
     }
 }
