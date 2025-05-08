@@ -1,20 +1,20 @@
 # VR Project Design Document
 
-**Date:** 10/04/2025  
+**Date:** 2025/04/10 \
 **Authors:** Kevin Wu & Rida Chaarani  
 
-**Last modified:** 22/04/2025
+**Last modified:** 2025/05/08
 
 ---
 
-## 1. App Info
+## 1. Application Info
 
 **Tentative Title:**  
 **VR Exoskeleton Simulation**
 
 **Category (check all that apply):**
 
-- [ ] Education & Training  
+- [x] Education & Training  
 - [ ] Mental Health & Fitness  
 - [ ] Travel & Discovery  
 - [ ] Media & Entertainment  
@@ -27,14 +27,24 @@
 
 ## 2. Pitch
 
-**The goal is for users to:**  
-Provide a standardized testing platform to evaluate the efficacy of various exoskeleton designs for construction workers through different tests tailored to each exoskeleton type.
+**Project Goal:**  
+To provide a standardized testing platform that evaluates the efficacy of various exoskeleton designs for construction workers. This platform supports task-specific assessments tailored to different types of occupational exoskeletons (OEs), enabling consistent benchmarking under realistic, repeatable conditions. The project builds on the Civil Engineering Master’s thesis by Malcolm Olivera Dunson-Todd at Concordia University, which proposed standardized tests for exoskeletons and exosuits used in construction. It emphasizes sensor-based data collection within a virtual environment to replicate the physical demands and ergonomic risks faced by workers—especially in tasks such as rebar installation—where musculoskeletal disorders (MSDs) are prevalent. By simulating realistic job conditions, this work aims to bridge the gap between lab-based efficacy studies and real-world effectiveness, helping to identify promising OE designs for large-scale adoption and future longitudinal field research.
 
 **Why VR?**  
-The simulation test will be consistent across different test sites, as the simulation will always be the same regardless of the real-life test location.
+Virtual reality ensures consistency across test sites by providing a controlled and repeatable simulation environment. Regardless of the physical testing location, the tasks, conditions, and scenarios within the VR simulation remain identical—eliminating variability caused by differing physical environments. This standardization is crucial for generating reliable, comparable data when evaluating exoskeleton performance across multiple locations and user groups. Furthermore, real-life tests are often time-consuming and costly to set up and replicate.
 
 **High-Level User Experience:**  
-Users will be capable of selecting different test cases, such as evaluating arm support or back support exoskeletons. An augmented reality (AR) version of the simulation may also be developed to enhance flexibility and real-world applicability.
+Users will be capable of selecting different test cases, such as evaluating arm support or back support exoskeletons, tailored to specific tasks. An augmented reality (AR) version of the simulation may also be developed to enhance flexibility and real-world applicability.
+
+Additional stretch goals demanded by the client includes:
+- Augmented reality (AR) implementation of the different test cases
+- Data collection of users body using IMU sensors
+- Real time feedback on the user's positioning during the simulation
+- Multiplayer version of the game including player avatars
+- ~~Hand tracking~~ **COMPLETED**
+- Track task completion time and collect data
+- Track user's position in real life using QR code or tracking sensors to position the test accordingly
+
 
 **Targeted Device Capabilities:**  
 - 6 degrees of freedom: translational and rotational x, y & z
@@ -44,11 +54,15 @@ Users will be capable of selecting different test cases, such as evaluating arm 
 
 ## 3. Basics
 
-**App Environment:**  
-- Virtual construction site
+**Tutorial Environment:**  
+- A dedicated tutorial scene provides users with an introductory video explaining the different controls, navigation and interaction with the test cases. Users can access the test selection menu from their wrist.
+
+**Test Cases:** 
+- Back Support Test
+- Arm Support Test
 
 **User Navigation:**  
-- Continuous movement  
+- Users moves by moving in real time in order to simulate real world.  
 
 ---
 
@@ -73,8 +87,8 @@ Users will be capable of selecting different test cases, such as evaluating arm 
 - Ray interactor: Not toggleable with thumb stick  
 
 **Main Menu:**  
-- Located in front of the user at start  
-- User can select specific test  
+- Located on the user's wrist  
+- User can select a specific test case
 
 **Optional UI Elements:**  
 - TBD  
@@ -86,15 +100,16 @@ Users will be capable of selecting different test cases, such as evaluating arm 
 ### Main Scene
 
 **Purpose:**
-To welcome the participant, provide a brief overview of the simulation, and allow them to choose which exoskeleton scenario to test.
+To welcome the participant, provide a brief overview of the simulation, video explanation of usage and allow them to choose which exoskeleton scenario to test.
 
 **Interactions:**  
 - The user is greeted with a welcome message and brief instructions.  
-- Two large buttons are presented:
+- Opening the menu on the wrist with pointer action will open a scroll view with the different buttons:
+  - **Tutorial** – Loads the tutorial scene.
   - **Back Support** – Loads the back support exoskeleton testing scene.
-  - **Arm Support** – Loads the arm support exoskeleton testing scene.  
-- Menu appears directly in front of the user upon scene start.
-- Trigger press while pointing at a button selects that option and loads the corresponding scene.
+  - **Arm Support** – Loads the arm support exoskeleton testing scene.
+  - **N/A** – Doesn't cause any interaction, only purpose is to be a placeholder replaced once other scenes are added 
+- Menu appears next to hand once opened and can be closed.
 
 ### Back Support Scene
 
@@ -116,7 +131,7 @@ To evaluate the performance and support of an arm support exoskeleton in a drill
 
 **Interactions:**  
 - A short tutorial UI is presented at the start to explain the task process.
-- The task area setup and objectives are currently TBD.
+- The task involves screwing multiple shelfs using a drill held up for an extended amount of time.
 - The scene will feature hand-based interactions focused on simulating arm fatigue tasks.
 - Trigger or grab interactions will be used as appropriate once the task is finalized.
 
@@ -142,10 +157,14 @@ To evaluate the performance and support of an arm support exoskeleton in a drill
 - [ ] All baked  
 - [x] Mostly baked with some mixed  
 - [ ] All real-time  
-- Light probes **will** be used for more realistic mixed lighting  
+- Light probes will be used for more realistic mixed lighting  
 
 ---
 
 ## 7. Sketch
 
-- To be made  
+**Back Support Scene**
+![alt text](images/image1.png)
+
+**Arm Support Scene**
+![Shelfs](images/image.png)
