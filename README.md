@@ -66,12 +66,12 @@ X
    - Select your headset in the **Build Settings > Run Device** dropdown.
    - Click **Build and Run** to deploy directly to the headset.
 
-## Tech Stack
+## Tech Stack:
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) 
+![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 
-- **Engine:** Unity
-- **Language:** C#
-- **Platform:** Meta Quest 3 (Android)
-- **XR SDK:** Oculus XR Plugin
+**Platform:** Meta Quest 3 (Android) \
+**XR SDK:** Oculus XR Plugin
 
 ## Authors and acknowledgment
 
