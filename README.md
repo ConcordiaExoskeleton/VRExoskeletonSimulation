@@ -8,32 +8,52 @@ This project is a VR testing simulation designed for wireless virtual reality he
 
 #### Core features:
 
-- Back support exoskeleton testing mode
-    - rebar tying simulation of a 6m x 6m with 25cm spacing work zone
-- Arm support exoskeleton testing mode
-- Tutorial UI for each scene
-- Realistic construction site environment
-- Physics-based object interaction
+- Back support exoskeleton test case
+   - rebar tying simulation of a 6m x 6m with 25cm spacing work zone (625 intersection to tie)
+   - simulated construction environment
+- Arm support exoskeleton test case
+   - shelf building simulation of screwing in two support, 3 screw per support, per shelf
+   - simulated room environment
+- Tutorial video for:
+   - Controls
+   - Navigation
+   - Rules
+   - Test conduction
+- Hand tracking (controller free, can freely switch between both modes)
+- Direct interactors (no ray interaction, nor teleportation)
 - Progress/Completion feedback
-
-#### Other features:
-
-- Audio and haptic feedback
-- Menu scene with scene selection
-- Modular design for future task additions
-- Support for direct interactor input
 
 ## Visuals
 
-X
+#### Hand interactive menu
+
+#### Tutorial Video
+
+#### Back support rebar grid task
+
+#### Back support environment
+
+#### Arm support shelfs task
+
+#### Arm support environment
 
 ## Controls
 
-| Action          | Control              |  
-|-----------------|----------------------|  
-| Grab            | Grip button          |  
-| Tie             | Trigger button       |
+### Controllers
 
+| Action          | Control                          |  
+|-----------------|----------------------------------|  
+| Movement        | Joystick                         |  
+| Grab            | Grip trigger (side button)       |
+| Recenter View   | Oculus button (right controller) |  
+
+### Hands
+
+| Action          | Gesture                          |  
+|-----------------|----------------------------------|  
+| Grab            | Grab - Close hand around an object |  
+| Press           | Point and physically touch it with index finger |
+| Recenter View   | Form an "OK" sign (index + thumb touching, facing you) and hold until completed |
 
 ## Hardware Requirements
 
