@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a VR testing simulation designed for wireless virtual reality headsets (Tested on Meta Quest 3) paired with usage of an exoskeleton to evaluate and test the efficacy of different exoskeleton designs in a construction environments as a standarized test. It's goal is to simulates tasks like lifting, carrying, placing, and tying rebar in a realistic outdoor construction site environment.
+This project is a VR testing simulation designed for wireless virtual reality headsets (Tested on the Meta Quest 3) to evolve towards new standardized evaluation of occupational exoskeleton efficacy in construction environments. The simulation enables users to perform realistic, physically dmanding tasks that are tailored to the specific exoskeleton such as tying rebars with a back support exoskeleton. The goal is to have a controlled virtual scenarios in order to assess the efficacy of the different exoskeleton designs through repeatable, measurable test cases.
 
 ## Features
 
@@ -73,17 +73,23 @@ X
 **Platform:** Meta Quest 3 (Android) \
 **XR SDK:** Oculus XR Plugin
 
+## Future Work
+
+[Project Design Document](./ProjectDesign.md) contains a section with the client's demands and stretch goals for the future development of this project.
+
 ## Authors and acknowledgment
 
-Developed by: Interns Kevin Wu and Rida Chaarani
+**Developed by:** Intern [Kevin Wu](https://github.com/ToasterBuilder) and Intern [Rida Chaarani](https://github.com/RiChaarani)
 
-Special thanks: PhD Professor Dr. Amin Hammad and Concordia university for lending and providing access to exoskeletons, virtual reality headset and other materials needed for this project.
+**Special thanks:** PhD Professor Dr. Amin Hammad and Concordia university for lending and providing access to occupational exoskeletons, virtual reality headsets and other essential resources that made this project possible.
 
 ## Project status
 
-🚧 **Early Development**  
-We are currently building the core scenes and establishing interaction systems. More features and polish coming soon!
+🚧 **Minimum Viable Product Achieved - Still in Development**  
+The core simulation is functional with two distinct test cases (arm support and back support). Users can navigate between scenes, perform different tasks, and collect basic performance data in a controlled VR environment. While the foundation is solid, the project is still under development.
 
 ## License
 
-All rights reserved by the creators of the VRExoskeletonSimulation
+**© 2025 VRExoskeletonSimulation Project Team. All rights reserved.**
+
+This project was developed for academic purposes by interns at Concordia University.
