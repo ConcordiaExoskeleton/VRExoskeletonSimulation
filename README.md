@@ -2,19 +2,19 @@
 
 ## Table of Contents
 
-- [Overview](##Overview)
-- [Features](##Features)
-- [Visuals](##Visuals)
-- [Controls](##Controls)
-   - [Controllers](###Controllers)
-   - [Hands](###Hands)
-- [Hardware Requirements](##HardwareRequirements)
-- [How to Run](##HowtoRun)
-- [Tech Stack](##TechStack)
-- [Future Work](##FutureWork)
-- [Authors and Acknowledgment](##AuthorsandAcknowledgment)
-- [Project status](##Projectstatus)
-- [License](##License)
+- [Overview](#overview)
+- [Features](#features)
+- [Visuals](#visuals)
+- [Controls](#controls)
+   - [Controllers](#controllers)
+   - [Hands](#hands)
+- [Hardware Requirements](#hardware-requirements)
+- [How to Run](#how-to-run)
+- [Tech Stack](#tech-stack)
+- [Future Work](#future-work)
+- [Authors and Acknowledgment](#authors-and-acknowledgment)
+- [Project status](#project-status)
+- [License](#license)
 
 ## Overview
 
@@ -130,4 +130,4 @@ The core simulation is functional with two distinct test cases (arm support and 
 
 This project was developed for academic purposes by interns at Concordia University.
 
-[Back to the top](#VRExoskeletonSimulation)
+[Back to the top](#vrexoskeletonsimulation)
