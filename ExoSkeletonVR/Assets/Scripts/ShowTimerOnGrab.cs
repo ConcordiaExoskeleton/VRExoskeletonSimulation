@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -25,7 +26,7 @@ public class ShowTimerOnGrab : MonoBehaviour
 
     private int currentCol = 0;
     private int currentRow = 0;
-    
+
     public float maxGrabDistance = 1.5f;
     private Transform interactorTransform;
 
@@ -116,7 +117,7 @@ public class ShowTimerOnGrab : MonoBehaviour
         {
             Vector3 spawnPosition = transform.position;
 
-            if (currentRow % 5 == 0)
+            if (currentRow % 6 == 0)
             {
                 spawnPosition.y -= 0.02f;
             }
@@ -134,11 +135,14 @@ public class ShowTimerOnGrab : MonoBehaviour
         if (currentRow >= rows)
         {
             Debug.Log("All ties completed.");
+            hasCompleted = true;
+
             foreach (var ps in finishParticles)
             {
                 if (ps != null)
                     ps.Play();
             }
+
             Destroy(tyingObject.transform.root.gameObject);
             Destroy(transform.root.gameObject);
             return;
