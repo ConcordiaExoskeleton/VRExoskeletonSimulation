@@ -1,5 +1,21 @@
 # VRExoskeletonSimulation
 
+## Table of Contents
+
+- [Overview](##Overview)
+- [Features](##Features)
+- [Visuals](##Visuals)
+- [Controls](##Controls)
+   - [Controllers](###Controllers)
+   - [Hands](###Hands)
+- [Hardware Requirements](##HardwareRequirements)
+- [How to Run](##HowtoRun)
+- [Tech Stack](##TechStack)
+- [Future Work](##FutureWork)
+- [Authors and Acknowledgment](##AuthorsandAcknowledgment)
+- [Project status](##Projectstatus)
+- [License](##License)
+
 ## Overview
 
 This project is a VR testing simulation designed for wireless virtual reality headsets (Tested on the Meta Quest 3) to evolve towards new standardized evaluation of occupational exoskeleton efficacy in construction environments. The simulation enables users to perform realistic, physically dmanding tasks that are tailored to the specific exoskeleton such as tying rebars with a back support exoskeleton. The goal is to have a controlled virtual scenarios in order to assess the efficacy of the different exoskeleton designs through repeatable, measurable test cases.
@@ -97,7 +113,7 @@ This project is a VR testing simulation designed for wireless virtual reality he
 
 [Project Design Document](./ProjectDesign.md) contains a section with the client's demands and stretch goals for the future development of this project.
 
-## Authors and acknowledgment
+## Authors and Acknowledgment
 
 **Developed by:** Intern [Kevin Wu](https://github.com/ToasterBuilder) and Intern [Rida Chaarani](https://github.com/RiChaarani)
 
@@ -113,3 +129,5 @@ The core simulation is functional with two distinct test cases (arm support and 
 **© 2025 VRExoskeletonSimulation Project Team. All rights reserved.**
 
 This project was developed for academic purposes by interns at Concordia University.
+
+[Back to the top](#VRExoskeletonSimulation)
