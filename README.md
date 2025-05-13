@@ -1,16 +1,23 @@
 # VRExoskeletonSimulation
 
+## Tech Stack:
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) 
+![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+
+**Platform:** Meta Quest 3 (Android) \
+**XR SDK:** Oculus XR Plugin
+
 ## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
-- [Visuals](#visuals)
 - [Controls](#controls)
    - [Controllers](#controllers)
    - [Hands](#hands)
 - [Hardware Requirements](#hardware-requirements)
 - [How to Run](#how-to-run)
-- [Tech Stack](#tech-stack)
+- [How to Find Collected Data](#how-to-find-collected-data)
+- [Visuals](#visuals)
 - [Future Work](#future-work)
 - [Authors and Acknowledgment](#authors-and-acknowledgment)
 - [Project status](#project-status)
@@ -38,20 +45,6 @@ This project is a VR testing simulation designed for wireless virtual reality he
 - Hand tracking (controller free, can freely switch between both modes)
 - Direct interactors (no ray interaction, nor teleportation)
 - Progress/Completion feedback
-
-## Visuals
-
-#### Hand interactive menu
-
-#### Tutorial Video
-
-#### Back support rebar grid task
-
-#### Back support environment
-
-#### Arm support shelfs task
-
-#### Arm support environment
 
 ## Controls
 
@@ -102,12 +95,42 @@ This project is a VR testing simulation designed for wireless virtual reality he
    - Select your headset in the **Build Settings > Run Device** dropdown.
    - Click **Build and Run** to deploy directly to the headset.
 
-## Tech Stack:
-![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) 
-![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+## How to Find Collected Data
 
-**Platform:** Meta Quest 3 (Android) \
-**XR SDK:** Oculus XR Plugin
+1. **Connect Your Meta Quest Headset to Your PC**
+   - Use a USB-C cable to connect the headset to your computer.
+
+2. **Allow File Access on the Headset**
+   - Put on your headset and **allow file transfer** when prompted. This will mount the headset as a storage device on your PC.
+   - If no popup appears, it can be found in the notification section of the headset
+
+3. **Navigate to the Headset Storage**
+   - Open **File Explorer** on your PC.
+   - Look for a device named something like **"Quest"** or **"Meta Quest"** under **This PC**.
+
+4. **Locate the App Folder**
+   - Navigate to the following path (may vary slightly depending on your build settings):
+     ```
+     Quest\Internal shared storage\Android\data\com.company.appName\files\
+     ```
+   - Replace `com.company.appName` with your actual app's package name.
+
+5. **Find the Excel File**
+   - Inside the `files` folder, look for the generated `.csv` file (TyingResult_`date_time`.csv).
+
+## Visuals
+
+#### Hand interactive menu
+
+#### Tutorial Video
+
+#### Back support rebar grid task
+
+#### Back support environment
+
+#### Arm support shelfs task
+
+#### Arm support environment
 
 ## Future Work
 
@@ -118,6 +141,8 @@ This project is a VR testing simulation designed for wireless virtual reality he
 **Developed by:** Intern [Kevin Wu](https://github.com/ToasterBuilder) and Intern [Rida Chaarani](https://github.com/RiChaarani)
 
 **Special thanks:** PhD Professor Dr. Amin Hammad and Concordia university for lending and providing access to occupational exoskeletons, virtual reality headsets and other essential resources that made this project possible.
+
+**Based on:** The project builds on the Civil Engineering Master’s thesis by Malcolm Olivera Dunson-Todd at Concordia University, which proposed standardized tests for exoskeletons and exosuits used in construction
 
 ## Project status
 
