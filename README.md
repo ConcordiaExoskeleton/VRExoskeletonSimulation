@@ -115,8 +115,22 @@ This project is a VR testing simulation designed for wireless virtual reality he
      ```
    - Replace `com.company.appName` with your actual app's package name.
 
-5. **Find the Excel File**
-   - Inside the `files` folder, look for the generated `.csv` file (TyingResult_`date_time`.csv).
+5. **Find the Data File**
+   - Inside the `files` folder, look for the generated `.txt` file (TyingResult_`date_time`.txt).
+
+   1. Open Excel
+      - Launch **Microsoft Excel**.
+      - Open a **blank workbook**.
+   2. Import the Text File
+      - Click the **Data** tab in the ribbon.
+      - Choose **Get Data** → **From Text/CSV**
+      - Locate and select the `.txt` file you just copied.
+      - Click **Import**.
+   3. Set Import Options
+      - In the import preview:
+         - Set **Delimiter** to `Comma`.
+         - Make sure columns like `index`, `total time`, and `lap time` are separated correctly.
+         - Click **Load**.
 
 ## Visuals
 

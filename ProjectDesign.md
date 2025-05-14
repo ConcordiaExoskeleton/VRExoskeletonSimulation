@@ -42,7 +42,7 @@ Additional stretch goals demanded by the client includes:
 - Real time feedback on the user's positioning during the simulation
 - Multiplayer version of the game including player avatars
 - ~~Hand tracking~~ **COMPLETED**
-- Track task completion time and collect data
+- ~~Track task completion time and collect data~~ **COMPLETED**
 - Track user's position in real life using QR code or tracking sensors to position the test accordingly
 
 

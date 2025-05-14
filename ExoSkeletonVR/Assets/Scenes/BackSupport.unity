@@ -11146,13 +11146,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radialTimerUI: {fileID: 273509414}
-  fillDuration: 0.1
+  fillDuration: 6
   radialSlider: {fileID: 1226443387}
   finishParticles:
   - {fileID: 1983839468}
   - {fileID: 1541489220}
   tyingObject: {fileID: 745091334}
-  maxGrabDistance: 110.5
+  maxGrabDistance: 0.5
   spawnPrefab: {fileID: 4512869407550048864, guid: dd06ae49e1a034b499da39fc679dbbb4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
