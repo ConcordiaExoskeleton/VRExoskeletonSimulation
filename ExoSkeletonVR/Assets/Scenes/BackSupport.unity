@@ -11146,7 +11146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radialTimerUI: {fileID: 273509414}
-  fillDuration: 0.01
+  fillDuration: 0.1
   radialSlider: {fileID: 1226443387}
   finishParticles:
   - {fileID: 1983839468}

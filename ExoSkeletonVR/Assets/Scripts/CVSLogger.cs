@@ -6,22 +6,37 @@ using UnityEngine;
 
 public class CVSLogger : MonoBehaviour
 {
-    public static void WriteCSV()
+    public static void WriteCSV(List<TimingEntry> entries)
     {
+        // Date
         DateTime date = DateTime.Now;
-        string folderPath = Application.persistentDataPath;
-
         string formattedDate = date.ToString("yyyy-MM-dd_HH:mm");
+        // Path
+        string folderPath = Application.persistentDataPath;
         string filePath = Path.Combine(folderPath, "TyingResult_"+formattedDate+".csv");
 
         using (StreamWriter writer = new StreamWriter(filePath, false))
         {
-            writer.WriteLine("Hi");
-            writer.WriteLine("How");
-            writer.WriteLine("Are");
-            writer.WriteLine("You");
+            writer.WriteLine("index,total time, lap time");
+            foreach (var entry in entries)
+            {
+                writer.WriteLine($"{entry.index},{entry.totalTime:F2},{entry.lapTime:F2}");
+            }
         }
+    }
+}
 
-        Debug.Log("CSV file written to: " + filePath);
+[Serializable]
+public class TimingEntry
+{
+    public int index;
+    public float totalTime;
+    public float lapTime;
+
+    public TimingEntry(int i, float total, float lap)
+    {
+        index = i;
+        totalTime = total;
+        lapTime = lap;
     }
 }

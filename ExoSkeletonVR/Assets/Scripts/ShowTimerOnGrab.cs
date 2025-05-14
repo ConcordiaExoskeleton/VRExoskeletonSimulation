@@ -8,24 +8,34 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ShowTimerOnGrab : MonoBehaviour
 {
+    // Radial Task timer per task
     public GameObject radialTimerUI;
     public float fillDuration = 10f;
     public Slider radialSlider;
+    private float timer = 0f;
+
+    // Objects
     public List<ParticleSystem> finishParticles;
     public GameObject tyingObject;
 
     private XRGrabInteractable grabInteractable;
+
     private bool isGrabbed = false;
-    private float timer = 0f;
     private bool hasCompleted = false;
 
+    // Positioning
     private Vector3 startPosition = new Vector3(-3f, 0.05f, 0f);
     private float spacing = 0.25f;
     private int cols = 25; // 6m / 0.25 = 24 steps + start
     private int rows = 25;
-
     private int currentCol = 0;
     private int currentRow = 0;
+
+    // Timer tracking for excel data collection
+    private float sessionStartTime = -1f;
+    private float lastLapTime = 0f;
+    private List<TimingEntry> timingLog = new List<TimingEntry>();
+    private int pointIndex = 0;
 
     public float maxGrabDistance = 1.5f;
     private Transform interactorTransform;
@@ -91,6 +101,15 @@ public class ShowTimerOnGrab : MonoBehaviour
         {
             isGrabbed = true;
             radialTimerUI?.SetActive(true);
+
+            // Start data collection timer on first grab
+            if (sessionStartTime < 0f)
+            {
+                sessionStartTime = Time.time;
+                lastLapTime = sessionStartTime;
+                timingLog.Add(new TimingEntry(0, 0f, 0f));
+                pointIndex = 1;
+            }
         }
     }
 
@@ -125,6 +144,18 @@ public class ShowTimerOnGrab : MonoBehaviour
             Instantiate(spawnPrefab, spawnPosition, spawnRotation);
         }
 
+        // Timing laps and total time
+        if (sessionStartTime > 0f && pointIndex > 0)
+        {
+            float currentTime = Time.time;
+            float totalTime = currentTime - sessionStartTime;
+            float lapTime = currentTime - lastLapTime;
+            lastLapTime = currentTime;
+
+            timingLog.Add(new TimingEntry(pointIndex, totalTime, lapTime));
+        }
+        pointIndex++;
+
         currentCol++;
         if (currentCol >= cols)
         {
@@ -135,7 +166,7 @@ public class ShowTimerOnGrab : MonoBehaviour
         if (currentRow >= rows)
         {
             Debug.Log("All ties completed.");
-            CVSLogger.WriteCSV();
+            CVSLogger.WriteCSV(timingLog);
             hasCompleted = true;
 
             foreach (var ps in finishParticles)
