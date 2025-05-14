@@ -13,16 +13,24 @@ public class CVSLogger : MonoBehaviour
         string formattedDate = date.ToString("yyyy-MM-dd_HH:mm");
         // Path
         string folderPath = Application.persistentDataPath;
-        string filePath = Path.Combine(folderPath, "TyingResult_"+formattedDate+".csv");
+        string filePath = Path.Combine(folderPath, "TyingResult_"+formattedDate+".txt");
 
         using (StreamWriter writer = new StreamWriter(filePath, false))
         {
             writer.WriteLine("index,total time, lap time");
             foreach (var entry in entries)
             {
-                writer.WriteLine($"{entry.index},{entry.totalTime:F2},{entry.lapTime:F2}");
+                string totalFormatted = FormatTime(entry.totalTime);
+                string lapFormatted = FormatTime(entry.lapTime);
+                writer.WriteLine($"{entry.index},{totalFormatted},{lapFormatted}");
             }
         }
+    }
+
+    private static string FormatTime(float timeInSeconds)
+    {
+        TimeSpan time = TimeSpan.FromSeconds(timeInSeconds);
+        return time.ToString(@"hh\:mm\:ss\.fff");
     }
 }
 
