@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class CVSLogger : MonoBehaviour
 {
-    public static void WriteCSV(List<TimingEntry> entries)
+    public static void WriteCSV(List<TimingEntry> entries, string fileName)
     {
         // Date
         DateTime date = DateTime.Now;
         string formattedDate = date.ToString("yyyy-MM-dd_HH:mm");
         // Path
         string folderPath = Application.persistentDataPath;
-        string filePath = Path.Combine(folderPath, "TyingResult_"+formattedDate+".txt");
+        string filePath = Path.Combine(folderPath, fileName + "_"+ formattedDate+".txt");
 
         using (StreamWriter writer = new StreamWriter(filePath, false))
         {

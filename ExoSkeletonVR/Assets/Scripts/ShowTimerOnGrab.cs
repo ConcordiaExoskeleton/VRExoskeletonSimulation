@@ -166,7 +166,7 @@ public class ShowTimerOnGrab : MonoBehaviour
         if (currentRow >= rows)
         {
             Debug.Log("All ties completed.");
-            CVSLogger.WriteCSV(timingLog);
+            CVSLogger.WriteCSV(timingLog, "TyingResults");
             hasCompleted = true;
 
             foreach (var ps in finishParticles)
