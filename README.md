@@ -148,7 +148,7 @@ This project is a VR testing simulation designed for wireless virtual reality he
 <img src="./images/drill.jpg" alt="Drill task" width="400"/>
 
 #### Arm support environment
-<img src="./images/shelf.Jjpg" alt="Shelf in room" width="400"/>
+<img src="./images/shelf.jpg" alt="Shelf in room" width="400"/>
 
 #### Arm exoskeleton
 <img src="./images/exoskeleton.JPG" alt="Arm exoskeleton" width="400"/>
