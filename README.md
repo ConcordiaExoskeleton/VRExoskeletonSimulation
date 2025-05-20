@@ -135,20 +135,20 @@ This project is a VR testing simulation designed for wireless virtual reality he
 ## Visuals
 
 #### Hand interactive menu
-<img src="./images/menu.JPG" alt="Hand interactive menu" width="400"/>
+<img src="./images/menu.jpg" alt="Hand interactive menu" width="400"/>
 
 #### Back support rebar grid task
-<img src="./images/tying.JPG" alt="Trying task" width="400"/>
-<img src="./images/rebar.JPG" alt="Rebar grod" width="400"/>
+<img src="./images/tying.jpg" alt="Trying task" width="400"/>
+<img src="./images/rebar.jpg" alt="Rebar grod" width="400"/>
 
 #### Back support environment
-<img src="./images/construction.JPG" alt="Construction site environment" width="400"/>
+<img src="./images/construction.jpg" alt="Construction site environment" width="400"/>
 
 #### Arm support shelfs task
-<img src="./images/drill.JPG" alt="Drill task" width="400"/>
+<img src="./images/drill.jpg" alt="Drill task" width="400"/>
 
 #### Arm support environment
-<img src="./images/shelf.JPG" alt="Shelf in room" width="400"/>
+<img src="./images/shelf.Jjpg" alt="Shelf in room" width="400"/>
 
 #### Arm exoskeleton
 <img src="./images/exoskeleton.JPG" alt="Arm exoskeleton" width="400"/>
