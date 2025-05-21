@@ -15,3 +15,6 @@ When running the game on VR, when you move your head it would move the whole scr
 **FIX**:
 1. In the hierarchy, search for “XR Device Simulator”
 2. Delete it or Disable it
+
+## Drill Attach
+For the arm support test case the drill will switch from grab to attach because with hand dectection grabbing was not accurate and would sometime let go. However the attach currently works with controllers only, and not for hands.
