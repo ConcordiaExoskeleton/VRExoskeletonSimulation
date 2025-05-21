@@ -16,7 +16,6 @@ public class OnProximity : MonoBehaviour
     private bool isInProximity = false;
     private float timer = 0f;
     private Coroutine fadeCoroutine;
-    private bool hasCompleted = false;
 
     private void Start()
     {
@@ -40,7 +39,6 @@ public class OnProximity : MonoBehaviour
             if (radialSlider.value >= 1f)
             {
                 Debug.Log("Timer completed.");
-                hasCompleted = true;
                 taskManager?.NotifyTaskCompleted(this);
                 gameObject.SetActive(false);
                 radialTimerUI.SetActive(false);
