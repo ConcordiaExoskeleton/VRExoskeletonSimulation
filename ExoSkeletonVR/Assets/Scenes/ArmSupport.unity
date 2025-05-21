@@ -1578,7 +1578,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 127365010}
+    m_TransformParent: {fileID: 1460264806}
     m_Modifications:
     - target: {fileID: 2324463433762844153, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1668,9 +1668,6 @@ PrefabInstance:
       addedObject: {fileID: 279705508}
     - targetCorrespondingSourceObject: {fileID: 2324463433763140059, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 279705507}
-    - targetCorrespondingSourceObject: {fileID: 2324463433763140059, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 279705506}
     - targetCorrespondingSourceObject: {fileID: 2324463433763140061, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       insertIndex: -1
@@ -1719,7 +1716,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279705504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -1834,19 +1831,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!114 &279705507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279705504}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41fbca6a1c991364e9d5515946aad08d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handTransform: {fileID: 127365010}
 --- !u!54 &279705508
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9161,14 +9145,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9221538581119136989, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 1606701921}
+    - targetCorrespondingSourceObject: {fileID: 9221538581119136989, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
+      insertIndex: 9
+      addedObject: {fileID: 279705502}
     - targetCorrespondingSourceObject: {fileID: 9221538581175994495, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1844041352}
-    - targetCorrespondingSourceObject: {fileID: 2410040326183753087, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 279705502}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
+--- !u!4 &1460264806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9221538581119136989, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
+  m_PrefabInstance: {fileID: 1460264805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1460264807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7933864916699234323, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
+  m_PrefabInstance: {fileID: 1460264805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1469631408
 GameObject:
   m_ObjectHideFlags: 0
@@ -9538,6 +9535,55 @@ MonoBehaviour:
   radialSlider: {fileID: 1546245116}
   fillDuration: 10
   taskManager: {fileID: 1856008863}
+--- !u!1 &1606701920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606701921}
+  - component: {fileID: 1606701922}
+  m_Layer: 0
+  m_Name: DrillAttacher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606701921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606701920}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460264806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1606701922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606701920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76c07368b379d8468026a679c335e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHand: {fileID: 1460264807}
+  drill: {fileID: 279705504}
+  attachOnStart: 1
+  localPositionOffset: {x: 0, y: 0, z: 0}
+  localRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1636133253
 GameObject:
   m_ObjectHideFlags: 0
@@ -10626,7 +10672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2324463433763140059, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2324463433763140059, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       propertyPath: m_TagString
