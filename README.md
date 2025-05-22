@@ -167,8 +167,8 @@ This project is a VR testing simulation designed for wireless virtual reality he
 
 ## Project status
 
-🚧 **Minimum Viable Product Achieved - Still in Development**  
-The core simulation is functional with two distinct test cases (arm support and back support). Users can navigate between scenes, perform different tasks, and collect basic performance data in a controlled VR environment. While the foundation is solid, the project is still under development.
+🚧 **Minimum Viable Product Achieved - Currently not in Development**  
+The core simulation is functional with two distinct test cases (arm support and back support). Users can navigate between scenes, perform different tasks, and collect basic performance data in a controlled VR environment. While the foundation is solid, the project is no more into development as our Internship comes to an end.
 
 ## License
 
