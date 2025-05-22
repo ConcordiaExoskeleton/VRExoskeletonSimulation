@@ -1573,6 +1573,7 @@ Transform:
   m_Children:
   - {fileID: 2055520376}
   - {fileID: 1703568386}
+  - {fileID: 1940232821956205350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1029573792
@@ -2310,7 +2311,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.1452323e+32, z: 6.11e-43, w: -6.987736e+23}
+  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 2.31e-43, w: 2.0341e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2636,7 +2637,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1020164559}
     m_Modifications:
     - target: {fileID: 3486231398634410896, guid: 78ea3d27df585ff4da4839f4309c52e6, type: 3}
       propertyPath: m_Colliders.Array.data[0]
@@ -2664,15 +2665,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8495782087217803425, guid: 78ea3d27df585ff4da4839f4309c52e6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8495782087217803425, guid: 78ea3d27df585ff4da4839f4309c52e6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8495782087217803425, guid: 78ea3d27df585ff4da4839f4309c52e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8495782087217803425, guid: 78ea3d27df585ff4da4839f4309c52e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2691,11 +2692,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78ea3d27df585ff4da4839f4309c52e6, type: 3}
+--- !u!4 &1940232821956205350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8495782087217803425, guid: 78ea3d27df585ff4da4839f4309c52e6, type: 3}
+  m_PrefabInstance: {fileID: 1940232821956205349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 485513941}
-  - {fileID: 1940232821956205349}
   - {fileID: 2046629159}
   - {fileID: 1020164559}
