@@ -726,11 +726,6 @@ MonoBehaviour:
   radialSlider: {fileID: 117179938}
   fillDuration: 10
   taskManager: {fileID: 370323804}
---- !u!4 &127365010 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2410040326183753087, guid: 93f7cc1d414534c46afa616e96dbcec3, type: 3}
-  m_PrefabInstance: {fileID: 1460264805}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &135187996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -833,13 +828,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140199467}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.09229599, y: -0.09229599, z: -0.7010574, w: 0.7010574}
+  m_LocalRotation: {x: 0.033244412, y: -0.1262233, z: 0.004232468, w: 0.9914356}
   m_LocalPosition: {x: 0.007, y: -0.054, z: -0.225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 279705502}
-  m_LocalEulerAnglesHint: {x: -15, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 3.841, y: -14.511, z: 0}
 --- !u!1 &178017918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,15 +1609,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2324463433762844155, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -1.4210855e-13
       objectReference: {fileID: 0}
     - target: {fileID: 2324463433762844155, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000009685754
+      value: 0.0000009685751
       objectReference: {fileID: 0}
     - target: {fileID: 2324463433762844155, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 2324463433762844155, guid: f5a2d19d564785d45a6207078113bcaa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9264,7 +9259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606701920}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10576,7 +10571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fbca6a1c991364e9d5515946aad08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 127365010}
 --- !u!54 &1844041358
 Rigidbody:
   m_ObjectHideFlags: 0

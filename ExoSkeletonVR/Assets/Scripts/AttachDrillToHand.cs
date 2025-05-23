@@ -8,7 +8,6 @@ public class AttachDrillToHand : MonoBehaviour
     public GameObject drill;
     public bool attachOnStart = true;
     public Vector3 localPositionOffset;
-    public Vector3 localRotationOffset;
 
     void Start()
     {
@@ -24,7 +23,7 @@ public class AttachDrillToHand : MonoBehaviour
         {
             drill.transform.SetParent(gripPose);
             drill.transform.localPosition = localPositionOffset;
-            drill.transform.localRotation = Quaternion.Euler(localRotationOffset);
+            drill.transform.localRotation = Quaternion.Euler(7, 0, 90);
         }
         else
         {
